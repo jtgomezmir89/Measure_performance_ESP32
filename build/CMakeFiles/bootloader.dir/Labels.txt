@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/jtgomez/esp/projects/Measure_performance_ESP32/build/CMakeFiles/bootloader
+/home/jtgomez/esp/projects/Measure_performance_ESP32/build/CMakeFiles/bootloader.rule
+/home/jtgomez/esp/projects/Measure_performance_ESP32/build/CMakeFiles/bootloader-complete.rule
+/home/jtgomez/esp/projects/Measure_performance_ESP32/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/jtgomez/esp/projects/Measure_performance_ESP32/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/jtgomez/esp/projects/Measure_performance_ESP32/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/jtgomez/esp/projects/Measure_performance_ESP32/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/jtgomez/esp/projects/Measure_performance_ESP32/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/jtgomez/esp/projects/Measure_performance_ESP32/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/jtgomez/esp/projects/Measure_performance_ESP32/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule
