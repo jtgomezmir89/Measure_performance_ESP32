@@ -1,0 +1,69 @@
+ets Jul 29 2019 1�ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3-dev-3225-g5a40bb8746 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time May 22 2024 10:49:33[0m
+[0;32mI (33) boot: Multicore bootloader[0m
+[0;32mI (37) boot: chip revision: v3.1[0m
+[0;32mI (41) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (46) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (50) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (55) boot: Enabling RNG early entropy source...[0m
+[0;32mI (60) boot: Partition Table:[0m
+[0;32mI (64) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (71) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (78) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (86) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (93) boot: End of partition table[0m
+[0;32mI (97) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=09434h ( 37940) map[0m
+[0;32mI (119) esp_image: segment 1: paddr=0001945c vaddr=3ffb0000 size=02200h (  8704) load[0m
+[0;32mI (122) esp_image: segment 2: paddr=0001b664 vaddr=40080000 size=00404h (  1028) load[0m
+[0;32mI (125) esp_image: segment 3: paddr=0001ba70 vaddr=40080408 size=045a8h ( 17832) load[0m
+[0;32mI (141) esp_image: segment 4: paddr=00020020 vaddr=400d0020 size=14a60h ( 84576) map[0m
+[0;32mI (171) esp_image: segment 5: paddr=00034a88 vaddr=400849b0 size=07824h ( 30756) load[0m
+[0;32mI (189) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (190) boot: Disabling RNG early entropy source...[0m
+[0;32mI (201) cpu_start: Multicore app[0m
+[0;32mI (210) cpu_start: Pro cpu start user code[0m
+[0;32mI (210) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (210) app_init: Application information:[0m
+[0;32mI (213) app_init: Project name:     performance_meas[0m
+[0;32mI (218) app_init: App version:      015312b-dirty[0m
+[0;32mI (224) app_init: Compile time:     May 22 2024 10:49:27[0m
+[0;32mI (230) app_init: ELF file SHA256:  1b005ec37...[0m
+[0;32mI (235) app_init: ESP-IDF:          v5.3-dev-3225-g5a40bb8746[0m
+[0;32mI (241) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (246) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (251) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (256) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (263) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (269) heap_init: At 3FFB2AC8 len 0002D538 (181 KiB): DRAM[0m
+[0;32mI (275) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (282) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (288) heap_init: At 4008C1D4 len 00013E2C (79 KiB): IRAM[0m
+[0;32mI (296) spi_flash: detected chip: generic[0m
+[0;32mI (299) spi_flash: flash io: dio[0m
+[0;33mW (303) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (317) main_task: Started on CPU0[0m
+[0;32mI (327) main_task: Calling app_main()[0m
+Integer Addition 	 Time_meas=17.534000 ms 	119.604881 MOP/S  	CPI=1.395191  	Freq=160 MHz 	Cycles=4206866 	icount=3015261 	Time_cy=26.292912 ms
+Integer Multiply 	 Time_meas=17.534000 ms 	119.604881 MOP/S  	CPI=1.395507  	Freq=160 MHz 	Cycles=4207820 	icount=3015263 	Time_cy=26.298876 ms
+Integer Division 	 Time_meas=26.273001 ms 	79.821564 MOP/S  	CPI=2.090937  	Freq=160 MHz 	Cycles=6305239 	icount=3015509 	Time_cy=39.407742 ms
+Integer Multiply-Add 	 Time_meas=38.297001 ms 	54.760216 MOP/S  	CPI=1.669237  	Freq=160 MHz 	Cycles=9191018 	icount=5506118 	Time_cy=57.443863 ms
+Float Addition  	 Time_meas=35.013000 ms 	59.896381 MOP/S  	CPI=1.885077  	Freq=160 MHz 	Cycles=8402777 	icount=4457525 	Time_cy=52.517357 ms
+Float Multiply  	 Time_meas=35.012001 ms 	59.898090 MOP/S  	CPI=1.885068  	Freq=160 MHz 	Cycles=8402738 	icount=4457525 	Time_cy=52.517113 ms
+Float Division  	 Time_meas=421.342987 ms 	4.977304 MOP/S  	CPI=1.399974  	Freq=160 MHz 	Cycles=101122019 	icount=72231359 	Time_cy=632.012634 ms
+Float Multiply-Add 	 Time_meas=71.632004 ms 	29.276749 MOP/S  	CPI=2.384048  	Freq=160 MHz 	Cycles=17191422 	icount=7211021 	Time_cy=107.446388 ms
+Double Addition 	 Time_meas=319.384003 ms 	6.566240 MOP/S  	CPI=1.780810  	Freq=160 MHz 	Cycles=76651898 	icount=43043274 	Time_cy=479.074341 ms
+Double Multiply 	 Time_meas=930.611023 ms 	2.253522 MOP/S  	CPI=1.627233  	Freq=160 MHz 	Cycles=223346441 	icount=137255327 	Time_cy=1395.915283 ms
+Double Multiply-Add 	 Time_meas=698.960022 ms 	3.000389 MOP/S  	CPI=1.929903  	Freq=160 MHz 	Cycles=167750196 	icount=86921549 	Time_cy=1048.438721 ms
+[0;32mI (3017) main_task: Returned from app_main()[0m

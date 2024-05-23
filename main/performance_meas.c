@@ -27,7 +27,7 @@ IRAM_ATTR static double tv[8];
 #define TEST(type,name,ops) void name (void) {\
     type f0 = tv[0],f1 = tv[1],f2 = tv[2],f3 = tv[3];\
     type f4 = tv[4],f5 = tv[5],f6 = tv[6],f7 = tv[7];\
-    for (int j = 0; j < N/128; j++) {\
+    for (int j = 0; j < N/16; j++) {\
         ops \
     }\
     tv[0] = f0;tv[1] = f1;tv[2] = f2;tv[3] = f3;\
@@ -41,10 +41,10 @@ IRAM_ATTR static double tv[8];
     f6 op1##=f7 op2 f0;f7 op1##=f0 op2 f1;
 
 // Definición de macros para operaciones específicas
-#define addops fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) fops(,+) // hace dos veces el llamado, 16 veces para que sea cosnistente con MACs
-#define divops fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/) fops(,/)
-#define mulops fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*) fops(,*)
-#define muladdops fops(+,*) fops(+,*) fops(+,*) fops(+,*) fops(+,*) fops(+,*) fops(+,*) fops(+,*)
+#define addops fops(,+) fops(,+)  // hace dos veces el llamado, 16 veces para que sea cosnistente con MACs
+#define divops fops(,/) fops(,/) 
+#define mulops fops(,*) fops(,*) 
+#define muladdops fops(+,*) fops(+,*) 
 
 // Implementación de funciones de prueba para diferentes tipos de datos y operaciones
 TEST(int,mulint,mulops)

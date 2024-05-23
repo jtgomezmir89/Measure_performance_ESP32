@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "performance_meas",
-    "project_version":    "1",
+    "project_version":    "015312b-dirty",
     "project_path":       "/home/jtgomez/esp/projects/Measure_performance_ESP32",
     "idf_path":           "/home/jtgomez/esp/idf/esp-idf",
     "build_dir":          "/home/jtgomez/esp/projects/Measure_performance_ESP32/build",
